@@ -198,3 +198,9 @@ class Simulator {
         }
     }
 }
+
+class NotEnoughFuelException extends Exception {
+    public NotEnoughFuelException(String message) {
+        super(message);
+    }
+}
