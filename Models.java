@@ -15,6 +15,26 @@ abstract class Launcher {
         this.price = price;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getMaxBoosters() {
+        return maxBoosters;
+    }
+
+    public double getMaxFuel() {
+        return maxFuel;
+    }
+
+    public double getMaxPayload() {
+        return maxPayload;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     abstract double calculateThrust();
 }
 
@@ -80,6 +100,22 @@ abstract class Pod {
         this.weight = weight;
         this.price = price;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isCrewed() {
+        return crewed;
+    }
+
+    public double getMass() {
+        return weight;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 }
 
 class Orion extends Pod {
@@ -118,6 +154,19 @@ abstract class Booster {
         this.fuelCapacity = fuelCapacity;
         this.price = price;
     }
+
+    public double getMass() {
+        return fuelCapacity;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return name + " | thrust: " + maxThrust + " kN | mass: " + fuelCapacity + " t | price: " + price + " M€";
+    }
 }
 
 class EapAriane extends Booster {
@@ -150,6 +199,17 @@ abstract class Mission {
         this.crewed = crewed;
         this.distance = distance;
         this.coefficient = coefficient;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public boolean isCrewedRequired() {
+        return crewed;
+    }
+
+    public double calculateRequiredFuel(Rocket rocket) {
+        return (rocket.calculateTotalMass() * distance * coefficient) / 1000;
     }
 
     abstract double calculateFuel(double masse);
