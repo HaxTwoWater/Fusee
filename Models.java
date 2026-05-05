@@ -259,3 +259,16 @@ class Mars extends Mission {
         return (weight * distance * coefficient) / 1000;
     }
 }
+
+class Sun extends Mission {
+
+    public Sun() {
+        super("Sun", true, 149597870, 0.006967);
+    }
+
+
+    @Override
+    double calculateFuel(double weight) {
+        return (weight * distance * coefficient) / 1000;
+    }
+}
