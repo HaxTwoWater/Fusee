@@ -14,7 +14,7 @@ abstract class Launcher {
         this.maxPayload = maxPayload;
         this.price = price;
     }
-    
+
     public String getName() {
         return name;
     }
@@ -99,6 +99,22 @@ abstract class Pod {
         this.maxPassengers = maxPassengers;
         this.weight = weight;
         this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isCrewed() {
+        return crewed;
+    }
+
+    public double getMass() {
+        return weight;
+    }
+
+    public double getPrice() {
+        return price;
     }
 }
 
