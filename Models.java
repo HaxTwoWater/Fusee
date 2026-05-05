@@ -155,6 +155,39 @@ abstract class Mission {
     abstract double calculateFuel(double masse);
 }
 
+class EarthOrbit extends Mission {
+    public EarthOrbit() {
+        super("Earth Orbit", false, 400, 1.0);
+    }
+
+    @Override
+    double calculateFuel(double weight) {
+        return (weight * distance * coefficient) / 1000;
+    }
+}
+
+class Iss extends Mission {
+    public Iss() {
+        super("ISS", true, 400, 1.2);
+    }
+
+    @Override
+    double calculateFuel(double weight) {
+        return (weight * distance * coefficient) / 1000;
+    }
+}
+
+class Moon extends Mission {
+    public Moon() {
+        super("Moon", true, 400000, 0.005);
+    }
+
+    @Override
+    double calculateFuel(double weight) {
+        return (weight * distance * coefficient) / 1000;
+    }
+}
+
 class Mars extends Mission {
 
     public Mars() {
