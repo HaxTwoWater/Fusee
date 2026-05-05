@@ -120,6 +120,23 @@ abstract class Booster {
     }
 }
 
+class EapAriane extends Booster {
+    public EapAriane() {
+        super("EAP (Ariane)", 6470, 270, 30);
+    } 
+}
+
+class SrbShuttle extends Booster {
+    public SrbShuttle() {
+        super("SRB (Shuttle)", 12500, 590, 55);
+    }
+}
+
+class Be3 extends Booster {
+    public Be3() {
+        super("BE-3", 490, 25, 12);
+    }
+}
 
 
 abstract class Mission {
