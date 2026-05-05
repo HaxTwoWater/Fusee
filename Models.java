@@ -154,6 +154,19 @@ abstract class Booster {
         this.fuelCapacity = fuelCapacity;
         this.price = price;
     }
+    
+    public double getMass() {
+        return mass;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return name + " | thrust: " + thrust + " kN | mass: " + mass + " t | price: " + price + " M€";
+    }
 }
 
 class EapAriane extends Booster {
