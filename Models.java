@@ -175,7 +175,7 @@ abstract class Booster {
 
     @Override
     public String toString() {
-        return name + " | thrust: " + maxThrust + " kN | mass: " + fuelCapacity + " t | price: " + price + " M€";
+        return name + " | thrust: " + maxThrust + " kN | mass: " + fuelCapacity + " t | price: " + price + " M eur";
     }
 }
 
