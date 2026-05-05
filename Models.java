@@ -36,6 +36,11 @@ abstract class Launcher {
     }
 
     abstract double calculateThrust();
+
+    @Override
+    public String toString() {
+        return name + " | crewed: " + crewed + " | max boosters: " + maxBoosters + " | max fuel: " + maxFuel + " t" + " | max payload: " + maxPayload + " t" + " | price: " + price + " M eur";
+    }
 }
 
 class SaturneV extends Launcher {
@@ -115,6 +120,11 @@ abstract class Pod {
 
     public double getPrice() {
         return price;
+    }
+
+    @Override
+    public String toString() {
+        return name + " | crewed: " + crewed + " | max passengers: " + maxPassengers + " | mass: " + weight + " t" + " | price: " + price + " M eur";
     }
 }
 
@@ -213,6 +223,11 @@ abstract class Mission {
     }
 
     abstract double calculateFuel(double masse);
+
+    @Override
+    public String toString() {
+        return name + " | crewed required: " + crewed + " | distance: " + distance + " km" + " | fuel coefficient: " + coefficient;
+    }
 }
 
 class EarthOrbit extends Mission {

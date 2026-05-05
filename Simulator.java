@@ -74,9 +74,9 @@ class Simulator {
 
     private void startLaunchProcess() {
         Launcher launcher = chooseFromList(launchers, "Choose a launcher");
-        Pod capsule = chooseFromList(pods, "Choose a capsule");
+        Pod pod = chooseFromList(pods, "Choose a pod");
 
-        Rocket rocket = new Rocket(launcher, capsule);
+        Rocket rocket = new Rocket(launcher, pod);
 
         System.out.print("How many boosters do you want to add? ");
         int boosterCount = Integer.parseInt(scanner.nextLine());

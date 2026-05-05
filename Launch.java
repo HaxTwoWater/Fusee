@@ -52,6 +52,6 @@ class Launch {
                 + " | " + missionName
                 + " | " + (success ? "SUCCESS" : "FAILURE")
                 + " | " + reason
-                + " | Cost: " + totalCost + " M€";
+                + " | Cost: " + totalCost + " M eur";
     }
 }
