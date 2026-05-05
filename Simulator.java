@@ -1,3 +1,5 @@
+import java.io.*;
+import java.time.LocalDateTime;
 import java.util.*;
 
 class Simulator {
@@ -13,11 +15,11 @@ class Simulator {
     private final List<Pod> pods = new ArrayList<>();
     private final List<Booster> boosters = new ArrayList<>();
     private final List<Mission> missions = new ArrayList<>();
-    //private final List<Launch> history = new ArrayList<>();
+    private final List<Launch> history = new ArrayList<>();
 
     private Simulator() {
         loadCatalogs();
-        //loadHistory();
+        loadHistory();
     }
 
     public static Simulator getInstance() {
@@ -40,9 +42,9 @@ class Simulator {
             String choice = scanner.nextLine();
 
             switch (choice) {
-                //case "1" -> startLaunchProcess();
-                //case "2" -> showHistory();
-                //case "0" -> running = false;
+                case "1" -> startLaunchProcess();
+                case "2" -> showHistory();
+                case "0" -> running = false;
                 default -> System.out.println("Invalid choice.");
             }
         }
@@ -67,7 +69,72 @@ class Simulator {
         missions.add(new Iss());
         missions.add(new Moon());
         missions.add(new Mars());
-        //missions.add(new Sun());
+        missions.add(new Sun());
+    }
+
+    private void startLaunchProcess() {
+        Launcher launcher = chooseFromList(launchers, "Choose a launcher");
+        Pod capsule = chooseFromList(pods, "Choose a capsule");
+
+        Rocket rocket = new Rocket(launcher, capsule);
+
+        System.out.print("How many boosters do you want to add? ");
+        int boosterCount = Integer.parseInt(scanner.nextLine());
+
+        for (int i = 0; i < boosterCount; i++) {
+            Booster booster = chooseFromList(boosters, "Choose booster " + (i + 1));
+            rocket.addBooster(booster);
+        }
+
+        Mission mission = chooseFromList(missions, "Choose a mission");
+
+        Launch launch = simulateLaunch(rocket, mission);
+        history.add(launch);
+        saveHistory();
+
+        System.out.println("\n=== Launch result ===");
+        System.out.println(launch);
+    }
+
+    private Launch simulateLaunch(Rocket rocket, Mission mission) {
+        boolean success = true;
+        String reason = "Launch successful";
+
+        double requiredFuel = mission.calculateRequiredFuel(rocket);
+        double totalCost = rocket.calculateTotalPrice() + (requiredFuel * FUEL_PRICE_PER_TON / 1_000_000);
+
+        try {
+            if (requiredFuel > rocket.getLauncher().getMaxFuel()) {
+                throw new NotEnoughFuelException("Not enough fuel capacity");
+            }
+
+            if (rocket.calculateTotalMass() > rocket.getLauncher().getMaxPayload()) {
+                success = false;
+                reason = "Payload limit exceeded";
+            } else if (rocket.getBoosterCount() > rocket.getLauncher().getMaxBoosters()) {
+                success = false;
+                reason = "Too many boosters";
+            } else if (mission.isCrewedRequired() && !rocket.getPod().isCrewed()) {
+                success = false;
+                reason = "Pod incompatible with crewed mission";
+            } else if (random.nextDouble() < RANDOM_FAILURE_RATE) {
+                success = false;
+                reason = "Unexpected technical anomaly";
+            }
+
+        } catch (NotEnoughFuelException e) {
+            success = false;
+            reason = e.getMessage();
+        }
+
+        return new Launch(
+                LocalDateTime.now(),
+                rocket,
+                mission,
+                success,
+                reason,
+                totalCost
+        );
     }
 
     private <T> T chooseFromList(List<T> list, String title) {
@@ -89,5 +156,45 @@ class Simulator {
         }
 
         return list.get(choice - 1);
+    }
+
+    private void showHistory() {
+        if (history.isEmpty()) {
+            System.out.println("No launch history yet.");
+            return;
+        }
+
+        for (Launch launch : history) {
+            System.out.println(launch);
+        }
+    }
+
+    private void saveHistory() {
+        try (PrintWriter writer = new PrintWriter(new FileWriter("history.txt"))) {
+            for (Launch launch : history) {
+                writer.println(launch.toFileLine());
+            }
+        } catch (IOException e) {
+            System.out.println("Error while saving history.");
+        }
+    }
+
+    private void loadHistory() {
+        File file = new File("history.txt");
+
+        if (!file.exists()) {
+            return;
+        }
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+                history.add(Launch.fromFileLine(line));
+            }
+
+        } catch (IOException e) {
+            System.out.println("Error while loading history.");
+        }
     }
 }
