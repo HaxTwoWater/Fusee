@@ -154,9 +154,9 @@ abstract class Booster {
         this.fuelCapacity = fuelCapacity;
         this.price = price;
     }
-    
+
     public double getMass() {
-        return mass;
+        return fuelCapacity;
     }
 
     public double getPrice() {
@@ -165,7 +165,7 @@ abstract class Booster {
 
     @Override
     public String toString() {
-        return name + " | thrust: " + thrust + " kN | mass: " + mass + " t | price: " + price + " M€";
+        return name + " | thrust: " + maxThrust + " kN | mass: " + fuelCapacity + " t | price: " + price + " M€";
     }
 }
 
