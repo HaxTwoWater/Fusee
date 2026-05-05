@@ -14,6 +14,26 @@ abstract class Launcher {
         this.maxPayload = maxPayload;
         this.price = price;
     }
+    
+    public String getName() {
+        return name;
+    }
+
+    public int getMaxBoosters() {
+        return maxBoosters;
+    }
+
+    public double getMaxFuel() {
+        return maxFuel;
+    }
+
+    public double getMaxPayload() {
+        return maxPayload;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 
     abstract double calculateThrust();
 }
