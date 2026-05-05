@@ -18,21 +18,91 @@ abstract class Launcher {
     abstract double calculateThrust();
 }
 
+class SaturneV extends Launcher {
+    
+    public SaturneV() {
+        super("Saturne V", true, 0 ,2700, 140, 1500);
+    }
 
+    @Override
+    double calculateThrust() {
+        return 3500;
+    }
+}
+
+class Ariane5 extends Launcher {
+
+    public Ariane5() {
+        super("Ariane 5", false, 2, 700, 20, 180);
+    }
+
+    @Override
+    double calculateThrust() {
+        return 2500;
+    }
+}
+
+class Falcon9 extends Launcher {
+    
+    public Falcon9() {
+        super("Falcon 9", true, 0, 500, 22, 60);
+    }
+
+    @Override
+    double calculateThrust() {
+        return 1500;
+    }
+}
+
+class Sls extends Launcher {
+
+    public Sls() {
+        super("SLS", true, 2, 2600, 130, 2000);
+    }
+
+    @Override
+    double calculateThrust() {
+        return 2500;
+    }
+}
 
 abstract class Pod {
     String name;
     boolean crewed;
     int maxPassengers;
-    int weight;
-    int price;
+    double weight;
+    double price;
 
-    public Pod(String name, boolean crewed, int maxPassengers, int weight, int price) {
+    public Pod(String name, boolean crewed, int maxPassengers, double weight, double price) {
         this.name = name;
         this.crewed = crewed;
         this.maxPassengers = maxPassengers;
         this.weight = weight;
         this.price = price;
+    }
+}
+
+class Orion extends Pod {
+    public Orion() {
+        super("Orion", true, 4, 10.4, 300);
+    }
+}
+
+class CrewDragon extends Pod {
+    public CrewDragon() {
+        super("Crew Dragon", true, 7, 12.0, 150);
+    }
+}
+
+class Apollo extends Pod {
+    public Apollo() {
+        super("Apollo", true, 3, 5.6, 200);
+    }
+}
+
+class CargoDragon extends Pod {
+    public CargoDragon() {
+        super("Cargo Dragon", false, 0, 9.5, 100);
     }
 }
 
@@ -50,6 +120,8 @@ abstract class Booster {
     }
 }
 
+
+
 abstract class Mission {
     String name;
     boolean crewed;
@@ -64,4 +136,16 @@ abstract class Mission {
     }
 
     abstract double calculateFuel(double masse);
+}
+
+class Mars extends Mission {
+
+    public Mars() {
+        super("Mars", true, 225000000, 0.000015);
+    }
+
+    @Override
+    double calculateFuel(double weight) {
+        return (weight * distance * coefficient) / 1000;
+    }
 }
