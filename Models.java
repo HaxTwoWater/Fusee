@@ -200,6 +200,17 @@ abstract class Mission {
         this.distance = distance;
         this.coefficient = coefficient;
     }
+    public String getName() {
+        return name;
+    }
+
+    public boolean isCrewedRequired() {
+        return crewed;
+    }
+
+    public double calculateRequiredFuel(Rocket rocket) {
+        return (rocket.calculateTotalMass() * distance * coefficient) / 1000;
+    }
 
     abstract double calculateFuel(double masse);
 }
