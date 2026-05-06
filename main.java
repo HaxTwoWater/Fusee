@@ -1,4 +1,4 @@
-public class main {
+class Main {
     public static void main(String[] args) {
         //creating new instance of the simulator
         Simulator simulator = Simulator.getInstance();
