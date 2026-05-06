@@ -1,5 +1,7 @@
 # Space Launch Simulator
 
+git clone https://github.com/HaxTwoWater/Fusee.git
+
 ## Description
 
 Space Launch Simulator is a Java console application that simulates rocket launches.
