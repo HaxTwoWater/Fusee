@@ -1,3 +1,6 @@
+// =================LAUNCER CLASS=================
+
+
 abstract class Launcher {
     String name;
     boolean crewed;
@@ -42,6 +45,11 @@ abstract class Launcher {
         return name + " | crewed: " + crewed + " | max boosters: " + maxBoosters + " | max fuel: " + maxFuel + " t" + " | max payload: " + maxPayload + " t" + " | price: " + price + " M eur";
     }
 }
+
+
+
+//---------------LAUNCHER SUBCLASS-------------
+
 
 class SaturneV extends Launcher {
     
@@ -91,6 +99,10 @@ class Sls extends Launcher {
     }
 }
 
+
+//=====================POD CLASS=================
+
+
 abstract class Pod {
     String name;
     boolean crewed;
@@ -128,6 +140,9 @@ abstract class Pod {
     }
 }
 
+//------------POD SUBCLASS------------
+
+
 class Orion extends Pod {
     public Orion() {
         super("Orion", true, 4, 10.4, 300);
@@ -151,6 +166,10 @@ class CargoDragon extends Pod {
         super("Cargo Dragon", false, 0, 9.5, 100);
     }
 }
+
+
+//=====================BOOSTER CLASS=================
+
 
 abstract class Booster {
     String name;
@@ -178,7 +197,7 @@ abstract class Booster {
         return name + " | thrust: " + maxThrust + " kN | mass: " + fuelCapacity + " t | price: " + price + " M eur";
     }
 }
-
+//------------BOOSTER SUBCLASS------------
 class EapAriane extends Booster {
     public EapAriane() {
         super("EAP (Ariane)", 6470, 270, 30);
@@ -196,6 +215,9 @@ class Be3 extends Booster {
         super("BE-3", 490, 25, 12);
     }
 }
+
+
+//=====================MISSION CLASS=================
 
 
 abstract class Mission {
@@ -229,6 +251,10 @@ abstract class Mission {
         return name + " | crewed required: " + crewed + " | distance: " + distance + " km" + " | fuel coefficient: " + coefficient;
     }
 }
+
+
+//------------MISSION SUBCLASS------------
+
 
 class EarthOrbit extends Mission {
     public EarthOrbit() {

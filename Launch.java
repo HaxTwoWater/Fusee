@@ -8,8 +8,7 @@ class Launch {
     private final String reason;
     private final double totalCost;
 
-    public Launch(LocalDateTime date, Rocket rocket, Mission mission,
-                  boolean success, String reason, double totalCost) {
+    public Launch(LocalDateTime date, Rocket rocket, Mission mission, boolean success, String reason, double totalCost) {
         this.date = date;
         this.rocketName = rocket.getName();
         this.missionName = mission.getName();
@@ -18,8 +17,7 @@ class Launch {
         this.totalCost = totalCost;
     }
 
-    private Launch(LocalDateTime date, String rocketName, String missionName,
-                   boolean success, String reason, double totalCost) {
+    private Launch(LocalDateTime date, String rocketName, String missionName, boolean success, String reason, double totalCost) {
         this.date = date;
         this.rocketName = rocketName;
         this.missionName = missionName;
@@ -29,8 +27,7 @@ class Launch {
     }
 
     public String toFileLine() {
-        return date + ";" + rocketName + ";" + missionName + ";"
-                + success + ";" + reason + ";" + totalCost;
+        return date + ";" + rocketName + ";" + missionName + ";" + success + ";" + reason + ";" + totalCost;
     }
 
     public static Launch fromFileLine(String line) {
@@ -48,10 +45,6 @@ class Launch {
 
     @Override
     public String toString() {
-        return date + " | " + rocketName
-                + " | " + missionName
-                + " | " + (success ? "SUCCESS" : "FAILURE")
-                + " | " + reason
-                + " | Cost: " + totalCost + " M eur";
+        return date + " | " + rocketName + " | " + missionName + " | " + (success ? "SUCCESS" : "FAILURE") + " | " + reason + " | Cost: " + totalCost + " M eur";
     }
 }

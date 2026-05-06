@@ -1,3 +1,7 @@
 2026-05-05T21:01:53.133038900;Saturne V + Orion;Earth Orbit;false;Payload limit exceeded;1830.134592
 2026-05-05T21:04:10.416049400;Saturne V + Orion;Sun;false;Not enough fuel capacity;2973.6075673556993
 2026-05-05T21:15:27.548761900;Saturne V + Crew Dragon;Sun;false;Not enough fuel capacity;1751.543278005576
+2026-05-05T21:21:30.155821400;Saturne V + Apollo;Sun;false;Not enough fuel capacity;1707.0039089811487
+2026-05-05T21:21:46.786163;Saturne V + Apollo;Earth Orbit;true;Launch successful;1700.002688
+2026-05-05T21:22:57.168596900;Saturne V + Apollo;Sun;true;Launch successful;1700.673549449888
+2026-05-05T21:23:10.612340900;Saturne V + Apollo;Mars;true;Launch successful;1700.02268
