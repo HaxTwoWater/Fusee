@@ -132,4 +132,169 @@ java Main
 
 ## Diagramme UML
 
-[![](https://mermaid.ink/img/pako:eNq9V1tP4zgU_itWeCkiRS30QiuENFNAOxIdEF3tw273wSRuam1id2xnBoahv30dx05tx2Wuu32pc77jc46_c4nzHCU0RdE0WpIkh5xfYpgxWCwJkD8lAXOICXiuJdXvqJCCzkIwTLK__gaQZfwQfKQ4rVVelsTevcBFmUNBmW2iywUUOLFATKSIJMjSucFcbG9gSZI1YluQ6xX3VWZww8scbUFSL1oKbynlojLxUC9aCnPMOaZkC4p6wcNRbMFaPlD2ZMGLBBKCGOD1v4XcQ5LSAjD1Z-8wZ-4cWpxmSLzTFHQOd7xYGhJkomMzrczlFKYzKGBOM95G1aY6-jtGE8RDOrUzVKt17mnyDxKAqb8YaG4MNYegVrP3r-mn32piAsbhR7QXrGIPgV4J6Yjs-jFl0VSFhel6MOXwHdVwVHvqtKzHwDNqpw6mqbbZ0f_GtH_gV1Rj2QECfCghEVg8tTYmME9Ukn6nMtVzqPKY0vLBPp-ndcewKqaWmqw17X1GS1LVlPTt4oaBjsm3zXCloPmQ-MynuYLfw0LVsRoSwaTWZt2kUnmAyyp8XCCQyoXdNsqULsvKfBvTJeqBkuAcQQJ4mVT1HzCJIKfEkteEAVGROJM8WUfTPdKONAav900MvDhi4LiPge_VLjFBr3GObjDxSVXoitGiwbXVXK7bvSoN1fjruTG1-dwmi7jkmqDXrLR5MvICOoRr6aYqTCso0xKWix0dynLzWBlsHpQdb4juaw0J7e2HbyOlGQoWK-fn8IELBhNxcbGTHgS5OjAFkDD0CVnNfVB1fgEf37bm0UFz6sfrEuVB4A4-VWO0jfksh7tyx1vjPzQP5nUEe5idN2F8L_W7iaXy_OPZWUBRMvKHLXrDMCRoaIuupTtKJs7Gm4VryUz6_yrNt0lSbuSYD-aZ859KJOYz5VViOoz_qztuGaYujTKQSwYzV_pmQ_OcunSzjBpF59qpB-ivycM9-lBihgJ9kmL_5mmQlaz4GUWrFU4w8jviaykwDoOpaMreaKnmct4gP5yJK3njW9-yByxs6bvFwiGXunmZQzN3dFeUXjbeU3FFaJmtq0ivHhO0EV5yjsIqZqoX8p0HMzOum5jVx0W3e-FfeXdfBhVYMxNC7DdcCEFBe86dxYX0FAxBuiJDUPjs5pA6se2oLMAJyZI38dSIvjb5pFjiJkobka-t8y_drjsmXcgZly7kjE3P4G58msGp5NY8cOT-WHBAezq4u9pDwowHhfs174BN6TvSXQe44qYRHLHVD3s6odv9cgGaxyiOMobTaCpYieKoQEx-NMvHSDXMMhJrJIdVNJXLFK1gmYul_AJ_kdvkq-FPSguzk1WeoukK5lw-lZvqrqm_0RsVRFJ9lY-mw4kyEU2fo8doenI2PD49HQ36g-H4pN8fjuLoKZoO-se9yah32u_3BoNxrz8avMTRZ-W0dzzpnZ2OJuPxZHg2Gk9OXv4FuBQJHw?type=png)](https://mermaid.live/edit#pako:eNq9V1tP4zgU_itWeCkiRS30QiuENFNAOxIdEF3tw273wSRuam1id2xnBoahv30dx05tx2Wuu32pc77jc46_c4nzHCU0RdE0WpIkh5xfYpgxWCwJkD8lAXOICXiuJdXvqJCCzkIwTLK__gaQZfwQfKQ4rVVelsTevcBFmUNBmW2iywUUOLFATKSIJMjSucFcbG9gSZI1YluQ6xX3VWZww8scbUFSL1oKbynlojLxUC9aCnPMOaZkC4p6wcNRbMFaPlD2ZMGLBBKCGOD1v4XcQ5LSAjD1Z-8wZ-4cWpxmSLzTFHQOd7xYGhJkomMzrczlFKYzKGBOM95G1aY6-jtGE8RDOrUzVKt17mnyDxKAqb8YaG4MNYegVrP3r-mn32piAsbhR7QXrGIPgV4J6Yjs-jFl0VSFhel6MOXwHdVwVHvqtKzHwDNqpw6mqbbZ0f_GtH_gV1Rj2QECfCghEVg8tTYmME9Ukn6nMtVzqPKY0vLBPp-ndcewKqaWmqw17X1GS1LVlPTt4oaBjsm3zXCloPmQ-MynuYLfw0LVsRoSwaTWZt2kUnmAyyp8XCCQyoXdNsqULsvKfBvTJeqBkuAcQQJ4mVT1HzCJIKfEkteEAVGROJM8WUfTPdKONAav900MvDhi4LiPge_VLjFBr3GObjDxSVXoitGiwbXVXK7bvSoN1fjruTG1-dwmi7jkmqDXrLR5MvICOoRr6aYqTCso0xKWix0dynLzWBlsHpQdb4juaw0J7e2HbyOlGQoWK-fn8IELBhNxcbGTHgS5OjAFkDD0CVnNfVB1fgEf37bm0UFz6sfrEuVB4A4-VWO0jfksh7tyx1vjPzQP5nUEe5idN2F8L_W7iaXy_OPZWUBRMvKHLXrDMCRoaIuupTtKJs7Gm4VryUz6_yrNt0lSbuSYD-aZ859KJOYz5VViOoz_qztuGaYujTKQSwYzV_pmQ_OcunSzjBpF59qpB-ivycM9-lBihgJ9kmL_5mmQlaz4GUWrFU4w8jviaykwDoOpaMreaKnmct4gP5yJK3njW9-yByxs6bvFwiGXunmZQzN3dFeUXjbeU3FFaJmtq0ivHhO0EV5yjsIqZqoX8p0HMzOum5jVx0W3e-FfeXdfBhVYMxNC7DdcCEFBe86dxYX0FAxBuiJDUPjs5pA6se2oLMAJyZI38dSIvjb5pFjiJkobka-t8y_drjsmXcgZly7kjE3P4G58msGp5NY8cOT-WHBAezq4u9pDwowHhfs174BN6TvSXQe44qYRHLHVD3s6odv9cgGaxyiOMobTaCpYieKoQEx-NMvHSDXMMhJrJIdVNJXLFK1gmYul_AJ_kdvkq-FPSguzk1WeoukK5lw-lZvqrqm_0RsVRFJ9lY-mw4kyEU2fo8doenI2PD49HQ36g-H4pN8fjuLoKZoO-se9yah32u_3BoNxrz8avMTRZ-W0dzzpnZ2OJuPxZHg2Gk9OXv4FuBQJHw)
+```mermaid
+classDiagram
+    class Main {
+        +main(String[] args) void
+    }
+
+    class Simulator {
+        -static Simulator instance
+        -List~Launcher~ launchers
+        -List~Capsule~ capsules
+        -List~Booster~ boosters
+        -List~Mission~ missions
+        -List~Launch~ history
+        -Scanner scanner
+        -Random random
+        -Simulator()
+        +getInstance() Simulator
+        +start() void
+        -loadCatalogs() void
+        -startLaunchProcess() void
+        -simulateLaunch(Rocket rocket, Mission mission) Launch
+        -showHistory() void
+        -saveHistory() void
+        -loadHistory() void
+    }
+
+    class Rocket {
+        -Launcher launcher
+        -Capsule capsule
+        -List~Booster~ boosters
+        +Rocket(Launcher launcher, Capsule capsule)
+        +addBooster(Booster booster) void
+        +addBooster(Booster booster, int quantity) void
+        +calculateTotalMass() double
+        +calculateTotalPrice() double
+        +getBoosterCount() int
+        +getLauncher() Launcher
+        +getCapsule() Capsule
+        +getName() String
+    }
+
+    class Launch {
+        -LocalDateTime date
+        -String rocketName
+        -String missionName
+        -boolean success
+        -String reason
+        -double totalCost
+        +Launch(LocalDateTime date, Rocket rocket, Mission mission, boolean success, String reason, double totalCost)
+        +toFileLine() String
+        +fromFileLine(String line) Launch
+        +toString() String
+    }
+
+    class Booster {
+        -String name
+        -double thrust
+        -double mass
+        -double price
+        +Booster(String name, double thrust, double mass, double price)
+        +getMass() double
+        +getPrice() double
+        +toString() String
+    }
+
+    class Launcher {
+        <<abstract>>
+        #String name
+        #boolean crewed
+        #int maxBoosters
+        #double maxFuel
+        #double maxPayload
+        #double price
+        +getName() String
+        +getMaxBoosters() int
+        +getMaxFuel() double
+        +getMaxPayload() double
+        +getPrice() double
+        +calculateThrust() double
+        +toString() String
+    }
+
+    class SaturnV
+    class Ariane5
+    class Falcon9
+    class SLS
+
+    class Capsule {
+        <<abstract>>
+        #String name
+        #boolean crewed
+        #int maxOccupants
+        #double mass
+        #double price
+        +getName() String
+        +isCrewed() boolean
+        +getMass() double
+        +getPrice() double
+        +toString() String
+    }
+
+    class Orion
+    class CrewDragon
+    class Apollo
+    class CargoDragon
+
+    class Mission {
+        <<abstract>>
+        #String name
+        #boolean crewedRequired
+        #double distance
+        #double fuelCoefficient
+        +getName() String
+        +isCrewedRequired() boolean
+        +calculateRequiredFuel(Rocket rocket) double
+        +toString() String
+    }
+
+    class EarthOrbit
+    class ISS
+    class Moon
+    class Mars
+    class Sun
+
+    class NotEnoughFuelException {
+        +NotEnoughFuelException(String message)
+    }
+
+    Main --> Simulator
+    Simulator --> Rocket
+    Simulator --> Launch
+    Simulator --> Launcher
+    Simulator --> Capsule
+    Simulator --> Booster
+    Simulator --> Mission
+    Simulator --> NotEnoughFuelException
+
+    Rocket --> Launcher
+    Rocket --> Capsule
+    Rocket --> Booster
+
+    Launch --> Rocket
+    Launch --> Mission
+
+    Launcher <|-- SaturnV
+    Launcher <|-- Ariane5
+    Launcher <|-- Falcon9
+    Launcher <|-- SLS
+
+    Capsule <|-- Orion
+    Capsule <|-- CrewDragon
+    Capsule <|-- Apollo
+    Capsule <|-- CargoDragon
+
+    Mission <|-- EarthOrbit
+    Mission <|-- ISS
+    Mission <|-- Moon
+    Mission <|-- Mars
+    Mission <|-- Sun
+
+    NotEnoughFuelException --|> Exception
+```
+
+## AI declaration
+
+Mostly used for the readme :p
